@@ -1,4 +1,6 @@
-# symfony-microkernel-edition
+# Symfony MicroKernel Edition
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/diegonobre/symfony-microkernel-edition/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/diegonobre/symfony-microkernel-edition/?branch=master)
 
 See documentation - [MicroKernelTrait](http://symfony.com/doc/current/configuration/micro_kernel_trait.html)
 
