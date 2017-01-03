@@ -10,3 +10,4 @@
 /var/sessions/*
 !var/sessions/.gitkeep
 /vendor/
+/web/bundles/
