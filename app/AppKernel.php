@@ -23,7 +23,8 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
-            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle()
+            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -58,6 +59,9 @@ class AppKernel extends Kernel
 
         // load the annotation routes
         $routes->import(__DIR__.'/../src/App/Controller/', '/', 'annotation');
+
+        // load NelmioApiDocBundle routes
+        $routes->import('@NelmioApiDocBundle/Resources/config/routing.yml', '/api/doc');
     }
 
     // optional, to use the standard Symfony cache directory

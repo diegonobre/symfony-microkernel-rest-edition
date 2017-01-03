@@ -10,9 +10,14 @@ class DefaultControllerTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $crawler = $client->request('GET', '/');
+        $client->request('GET', '/');
+        $response = $client->getResponse();
 
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertContains('Welcome to Symfony MicroKernel', $crawler->filter('#container h1')->text());
+        $this->assertEquals(200, $response->getStatusCode());
+
+        $this->assertJsonStringEqualsJsonString(
+            $response->getContent(),
+            json_encode(['hello' => 'rest'])
+        );
     }
 }

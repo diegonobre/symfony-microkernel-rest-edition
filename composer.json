@@ -5,7 +5,6 @@
     "description": "The \"Symfony MicroKernel Edition\" distribution",
     "keywords": ["framework", "microframework", "microkernel"],
     "homepage": "https://github.com/diegonobre/symfony-microkernel-edition",
-    "license": "MIT",
     "authors": [
         {
             "name": "Diego Nobre",
@@ -27,7 +26,8 @@
         "doctrine/doctrine-cache-bundle": "^1.2",
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0",
-        "incenteev/composer-parameter-handler": "^2.0"
+        "incenteev/composer-parameter-handler": "^2.0",
+        "nelmio/api-doc-bundle": "^2.13"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
